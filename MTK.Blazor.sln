@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTK.Blazor", "MTK.Blazor\MTK.Blazor.csproj", "{30DE86B3-903A-4DCC-AB2F-CC7832B380C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTK.DemoApp", "MTK.DemoApp\MTK.DemoApp.csproj", "{8448DAF5-828D-4867-8A2F-66A0549E23A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30DE86B3-903A-4DCC-AB2F-CC7832B380C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30DE86B3-903A-4DCC-AB2F-CC7832B380C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30DE86B3-903A-4DCC-AB2F-CC7832B380C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30DE86B3-903A-4DCC-AB2F-CC7832B380C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8448DAF5-828D-4867-8A2F-66A0549E23A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8448DAF5-828D-4867-8A2F-66A0549E23A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8448DAF5-828D-4867-8A2F-66A0549E23A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8448DAF5-828D-4867-8A2F-66A0549E23A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

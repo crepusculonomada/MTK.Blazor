@@ -1,0 +1,10 @@
+﻿@inherits LayoutComponentBase
+
+<CascadingValue Value="this" Name="Layout">
+    @Body
+</CascadingValue>
+
+@code
+{
+    public void Refresh () => InvokeAsync(StateHasChanged);
+}
