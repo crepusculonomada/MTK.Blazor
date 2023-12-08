@@ -1,0 +1,15 @@
+﻿@page "/counter"
+
+@inherits MtkComponentBase<MTK.DemoApp.ViewModels.CounterViewModel>
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+
+<button class="btn btn-primary" @onclick="ViewModel.IncrementCount">+</button>
+<span style="margin-left: 10px; margin-right: 10px;">
+    Current count: @ViewModel.CurrentCount
+</span>
+<button class="btn btn-primary" @onclick="ViewModel.DecrementCount">-</button>
+
