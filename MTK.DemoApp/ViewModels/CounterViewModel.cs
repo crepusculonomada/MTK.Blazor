@@ -1,11 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using MTK.Blazor;
 
 namespace MTK.DemoApp.ViewModels;
 
-using MTK.Blazor;
-
-public partial class CounterViewModel : MtkViewModelBase
+public partial class CounterViewModel : MtkViewModel
 {
     private readonly Random random;
     

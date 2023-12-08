@@ -2,7 +2,7 @@
 
 namespace MTK.Blazor;
 
-public partial class MtkViewModelBase : ObservableObject
+public partial class MtkViewModel : ObservableObject
 {
     
     [ObservableProperty] private bool _isVisible = true;

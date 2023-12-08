@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Components.Rendering;
 
 namespace MTK.Blazor;
 
-public abstract class MtkComponentBase<T> : ComponentBase, IAsyncDisposable where T : MtkViewModelBase
+public abstract class MtkComponent<T> : ComponentBase, IAsyncDisposable where T : MtkViewModel
 {
     [Inject] public IMessenger? Messenger { get; set; }
     [Inject] public T? ViewModel { get; private set; }

@@ -1,9 +1,17 @@
 ﻿@page "/"
+@inherits MtkComponent<IndexViewModel>
 
-<PageTitle>Index</PageTitle>
+<PageTitle>@ViewModel.Title</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>@ViewModel.Head</h1>
 
 Welcome to your new app.
+
+<p>
+    Title of the Tab: <input type="text" @bind="@ViewModel.Title" @bind:event="oninput"/>
+</p>
+<p>
+    Title of the Page: <input type="text" @bind="@ViewModel.Head" @bind:event="oninput"/>
+</p>
 
 <SurveyPrompt Title="How is Blazor working for you?"/>
