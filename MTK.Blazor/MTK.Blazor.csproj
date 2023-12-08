@@ -1,10 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
-
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>11</LangVersion>
+        <!-- NuGet Package Metadata -->
+        <PackageId>MTK.Blazor</PackageId>
+        <Version>0.0.1</Version>
+        <Authors>João Ferreira</Authors>
+        <Company>Crepúsculo Nómada</Company>
+        <Description>Usefull library to work with MVVM Community Toolkit with Blazor App</Description>
+        <PackageTags>MVVM;Blazor</PackageTags>
+        <RepositoryUrl>URL to your repo</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
@@ -12,5 +23,4 @@
       <PackageReference Include="Microsoft.AspNetCore.Components" Version="7.0.14" />
       <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.14" />
     </ItemGroup>
-
 </Project>
