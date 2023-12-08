@@ -13,7 +13,6 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 // MTK
 builder.Services.AddSingleton<IMessenger>(_ => WeakReferenceMessenger.Default);
-builder.Services.AddMtk();
 builder.Services.AddTransient<CounterViewModel>();
 
 await builder.Build().RunAsync();
