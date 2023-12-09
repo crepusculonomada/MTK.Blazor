@@ -12,7 +12,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
 // MTK
-builder.Services.AddSingleton<IMessenger>(_ => WeakReferenceMessenger.Default);
+builder.Services.AddMtk();
 builder.Services.RegisterMtkViewModels(typeof(MTK.DemoApp.ViewModels.IndexViewModel).Assembly);
 
 await builder.Build().RunAsync();
