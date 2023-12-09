@@ -4,6 +4,7 @@
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <LangVersion>12</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -13,6 +14,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\MTK.Blazor\MTK.Blazor.csproj" />
+      <ProjectReference Include="..\MTK.DemoApp.ViewModels\MTK.DemoApp.ViewModels.csproj" />
     </ItemGroup>
 
 </Project>
