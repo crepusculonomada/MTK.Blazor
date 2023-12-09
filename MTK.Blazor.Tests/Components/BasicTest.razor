@@ -1,0 +1,10 @@
+﻿@layout MainLayout
+@inherits MtkComponent<MTK.Blazor.Tests.ViewModels.TestViewModel>
+
+<title>@ViewModel.Title</title>
+
+<div id="textPreview">@ViewModel.Text</div>
+
+<input id="textField" type="text" @bind="ViewModel.Text"/>
+
+<button id="testButton" @onclick="@(() => ViewModel.Title = ViewModel.Text)">Set Title</button>

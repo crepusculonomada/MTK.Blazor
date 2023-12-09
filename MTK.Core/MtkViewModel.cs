@@ -14,12 +14,4 @@ public partial class MtkViewModel : ObservableObject
     }
     
     public virtual Task TerminateAsync() => Task.CompletedTask;
-
-    protected override void OnPropertyChanged(PropertyChangedEventArgs e)
-    {
-        base.OnPropertyChanged(e);
-        if (e.PropertyName != null) OnPropertyChanged(e.PropertyName);
-    }
-    
-    public virtual void OnPropertyChanged(string propertyName) { }
 }

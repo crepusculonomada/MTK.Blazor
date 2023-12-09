@@ -1,0 +1,22 @@
+﻿@inherits MtkComponent<CounterViewModel>
+
+@code {
+
+    [Parameter]
+    public int Counter
+    {
+        get => ViewModel.CurrentCount;
+        set => ViewModel.CurrentCount = value;
+    }
+
+    private void IncrementCount() => ViewModel.IncrementCountCommand.Execute(null);
+    private void DecrementCount() => ViewModel.DecrementCountCommand.Execute(null);
+    private void ResetCount() => ViewModel.ResetCountCommand.Execute(null);
+
+}
+
+<div id="componentCounterDiv">@ViewModel.CurrentCount</div>
+
+<button id="upButton" @onclick="IncrementCount">Up</button>
+<button id="downButton" @onclick="DecrementCount">Down</button>
+<button id="resetButton" @onclick="ResetCount">Reset</button>
