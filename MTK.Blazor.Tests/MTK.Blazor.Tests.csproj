@@ -7,6 +7,7 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
+        <LangVersion>12</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -26,7 +27,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MTK.Blazor\MTK.Blazor.csproj" />
+        <ProjectReference Include="..\MTK.Blazor.Generators\MTK.Blazor.Generators.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+        <ProjectReference Include="..\MTK.Blazor\MTK.Blazor.csproj" />
     </ItemGroup>
     
     <PropertyGroup>

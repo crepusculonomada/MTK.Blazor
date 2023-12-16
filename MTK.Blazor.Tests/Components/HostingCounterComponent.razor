@@ -1,3 +1,11 @@
 ﻿@layout MtkLayout
 
-<CounterComponent/>
+@Counter
+<button id="hostIncButton" @onclick="() => Counter++">INC</button>
+
+<CounterComponent CurrentCount="@Counter"/>
+
+@code
+{
+    private int Counter { get; set; }
+}

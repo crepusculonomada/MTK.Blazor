@@ -44,10 +44,13 @@ public class CounterTests : TestContext
         var cut = RenderComponent<HostingCounterComponent>();
         // cut.Find("#hostCounterDiv").TextContent.Should().Be("0");
         cut.Find("#componentCounterDiv").TextContent.Should().Be("0");
-        cut.Find("#upButton").Click();
+        cut.Find("#hostIncButton").Click();
         cut.Find("#componentCounterDiv").TextContent.Should().Be("1");
-        
-        // var hostCounterDiv = cut.Find("#hostCounterDiv");
-        // hostCounterDiv.TextContent.Should().Be("1");
+        cut.Find("#upButton").Click();
+        cut.Find("#componentCounterDiv").TextContent.Should().Be("2");
+        // One way Binding, so not backward updated
+        cut.Find("#hostIncButton").Click();
+        cut.Find("#componentCounterDiv").TextContent.Should().Be("2");
     }
+    
 }
