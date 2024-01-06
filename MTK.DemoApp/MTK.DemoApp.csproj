@@ -13,6 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\MTK.Blazor.Generators\MTK.Blazor.Generators.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
       <ProjectReference Include="..\MTK.Blazor\MTK.Blazor.csproj" />
       <ProjectReference Include="..\MTK.DemoApp.ViewModels\MTK.DemoApp.ViewModels.csproj" />
     </ItemGroup>

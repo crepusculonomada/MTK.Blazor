@@ -1,0 +1,6 @@
+﻿@layout MtkLayout 
+@inherits MtkComponent<CounterViewModel>
+<title>Counter Component</title>
+
+<div id="counterDiv">@ViewModel.CurrentCount</div>
+<button id="incrementButton" @onclick="() => ViewModel.IncrementCountCommand.Execute(null)">Increment</button>

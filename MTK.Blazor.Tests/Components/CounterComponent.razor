@@ -1,0 +1,8 @@
+﻿@inherits MtkComponent<CounterViewModel>
+
+<div id="componentCounterModelDiv">@ViewModel.CurrentCount</div>
+<div id="componentCounterParamDiv">@CurrentCount</div>
+
+<button id="upButton" @onclick="IncrementCount">Up</button>
+<button id="downButton" @onclick="DecrementCount">Down</button>
+<button id="resetButton" @onclick="ResetCount">Reset</button>

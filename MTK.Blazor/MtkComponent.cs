@@ -8,7 +8,7 @@ namespace MTK.Blazor;
 public abstract class MtkComponent<T> : ComponentBase, IAsyncDisposable where T : MtkViewModel
 {
     [Inject] public IMessenger? Messenger { get; set; }
-    [Inject] public T? ViewModel { get; private set; }
+    [Inject] public T ViewModel { get; private set; }
     [CascadingParameter(Name = "Layout")] public MtkLayout? Layout { get; set; }
 
     protected override async Task OnInitializedAsync()
