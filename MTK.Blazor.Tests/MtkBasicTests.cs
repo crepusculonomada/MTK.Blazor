@@ -4,6 +4,7 @@ using MTK.Blazor.Tests.Components;
 
 namespace MTK.Blazor.Tests;
 
+[Trait("Category", "TDD")]
 public class MtkBasicTests : TestContext
 {
     public MtkBasicTests()
@@ -41,7 +42,7 @@ public class MtkBasicTests : TestContext
         title.TextContent.Should().NotBe("New Title");
         var textField = cut.Find("#textField");
         textField.Change("New Title");
-        cut.Instance.ViewModel!.Text.Should().Be("New Title");
+        cut.Instance.ViewModel!.Text.Should().Be("New Title", "The Text Property in ViewModel is not updated");
         var button = cut.Find("#testButton");
         button.Click();
         title.TextContent.Should().Be("New Title");

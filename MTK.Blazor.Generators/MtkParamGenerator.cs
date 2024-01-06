@@ -30,7 +30,7 @@ public class MtkParamGenerator : IIncrementalGenerator
 
         text.Append("namespace MTK.Blazor;\n");
         text.Append("[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]\n");
-        text.Append("internal class MtkParamAttribute(string name) : Attribute{\n");
+        text.Append("internal class MtkParamAttribute(string name, Type type) : Attribute{\n");
         text.Append("public string Name { get; } = name;\n");
         text.Append("}\n");
 
@@ -47,7 +47,8 @@ public class MtkParamGenerator : IIncrementalGenerator
         var classSymbol = syntaxContext.SemanticModel.GetDeclaredSymbol(classSyntax);
         if (classSymbol is null) return null;
 
-        var classInfo = syntaxContext.SemanticModel.Compilation.GetTypeByMetadataName(classSymbol.ToDisplayString());
+        var fullyQualifiedMetadataName = classSymbol.ToDisplayString();
+        var classInfo = syntaxContext.SemanticModel.Compilation.GetTypeByMetadataName(fullyQualifiedMetadataName);
         if (classInfo is null) return null;
 
         var attributeSymbol =
@@ -60,8 +61,10 @@ public class MtkParamGenerator : IIncrementalGenerator
 
         var paramsToGenerate = attributes.Select(a =>
         {
-            var name = a.ConstructorArguments.FirstOrDefault().Value?.ToString();
-            return string.IsNullOrEmpty(name) ? null : new ParamsToGenerate(name!, "int");
+            var name = a.ConstructorArguments[0].Value?.ToString();
+            var type = a.ConstructorArguments[1].Value?.ToString();
+            if (name is null || type is null) return null;
+            return string.IsNullOrEmpty(name) ? null : new ParamsToGenerate(name, type);
         }).Where(p => p != null);
 
         return new ClassToGenerate(classInfo.ContainingNamespace.ToDisplayString(), classInfo.Name, paramsToGenerate!);

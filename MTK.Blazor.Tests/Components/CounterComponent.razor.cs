@@ -2,8 +2,8 @@
 
 namespace MTK.Blazor.Tests.Components;
 
-[MtkParam("CurrentCount")]
-public partial class CounterComponent
+[MtkParam("CurrentCount", typeof(int))]
+public partial class CounterComponent : MtkComponent<CounterViewModel>
 {
     private void IncrementCount() => ViewModel.IncrementCountCommand.Execute(null);
     private void DecrementCount() => ViewModel.DecrementCountCommand.Execute(null);

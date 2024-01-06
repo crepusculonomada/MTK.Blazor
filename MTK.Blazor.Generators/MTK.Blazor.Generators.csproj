@@ -17,5 +17,20 @@
       </PackageReference>
       <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" />
     </ItemGroup>
+    
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <SymbolPackageOutputPath>$(OutputPath)</SymbolPackageOutputPath>
+        
+        <PackageId>MET.Blazor.Generators</PackageId>
+        <Version>1.0</Version>
+        <Authors>Crepusculo Nómada</Authors>
+        <Description>MVVM Community Tookit Helper Generators for Blazor</Description>
+        <PackageTags>roslyn;compiler;code;analysis;language</PackageTags>
+        
+    </PropertyGroup>
 
 </Project>
