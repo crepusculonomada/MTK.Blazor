@@ -6,11 +6,12 @@
         <LangVersion>12</LangVersion>
         <!-- NuGet Package Metadata -->
         <PackageId>MTK.Blazor</PackageId>
-        <Version>0.0.1</Version>
+        <Version>0.0.3</Version>
         <Authors>João Ferreira</Authors>
-        <Company>Crepúsculo Nómada</Company>
+        <Company>Twilight Nomads</Company>
         <Description>Usefull library to work with MVVM Community Toolkit with Blazor App</Description>
         <PackageTags>MVVM;Blazor</PackageTags>
+        <Product>MTK</Product>
         <RepositoryUrl>https://github.com/crepusculonomada/MTK.Blazor</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -37,4 +38,5 @@
     <ItemGroup>
       <ProjectReference Include="..\MTK.Core\MTK.Core.csproj" />
     </ItemGroup>
+    
 </Project>

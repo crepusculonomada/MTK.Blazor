@@ -25,12 +25,14 @@
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <SymbolPackageOutputPath>$(OutputPath)</SymbolPackageOutputPath>
         
-        <PackageId>MET.Blazor.Generators</PackageId>
-        <Version>1.0</Version>
-        <Authors>Crepusculo Nómada</Authors>
+        <PackageId>MTK.Blazor.Generators</PackageId>
+        <Version>0.2.1</Version>
+        <Authors>Twilight Nomads</Authors>
         <Description>MVVM Community Tookit Helper Generators for Blazor</Description>
+        <Product>MTK</Product>
         <PackageTags>roslyn;compiler;code;analysis;language</PackageTags>
         
     </PropertyGroup>
+
 
 </Project>
