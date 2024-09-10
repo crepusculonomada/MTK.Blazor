@@ -18,13 +18,10 @@ public partial class App : PrismApplication
 {
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
     {
-        containerRegistry.RegisterForNavigation<Index>();
-        containerRegistry.RegisterForNavigation<Counter>();
+        containerRegistry.RegisterForNavigation<Index, IndexViewModel>();
+        containerRegistry.RegisterForNavigation<Counter, CounterViewModel>();
         
         containerRegistry.RegisterSingleton<IMessenger, WeakReferenceMessenger>();
-        
-        ViewModelLocationProvider.Register<Index, IndexViewModel>();
-        ViewModelLocationProvider.Register<Counter, CounterViewModel>();
     }
 
     protected override Window CreateShell()
