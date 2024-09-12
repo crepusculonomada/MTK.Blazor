@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MTK.MauiDemoApp.Views"
+             xmlns:vm="clr-namespace:MTK.DemoApp.ViewModels;assembly=MTK.DemoApp.ViewModels"
+             x:DataType="vm:CounterViewModel"
+             x:Class="MTK.MauiDemoApp.Views.Counter">
+    <ContentPage.Content>
+        <StackLayout Spacing="5">
+            <Button Text="INC" Command="{Binding Path=IncrementCountCommand}"></Button>
+            <Label Text="{Binding Path=CurrentCount}" HorizontalTextAlignment="Center" FontSize="24"></Label>
+            <Button Text="DEC" Command="{Binding Path=DecrementCountCommand}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

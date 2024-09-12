@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MTK.DemoApp.ViewModels;assembly=MTK.DemoApp.ViewModels"
+             x:DataType="vm:IndexViewModel"
+             x:Class="MTK.MauiDemoApp.Views.Index">
+    <ContentPage.Content>
+        <StackLayout Spacing="5">
+            <Label
+                Text="{Binding Path=Title}"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            <Entry Text="{Binding Path=Title}"></Entry>
+            <Button Text="Reset" Command="{Binding SetTitleCommand}" CommandParameter="MTK Demo App"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
