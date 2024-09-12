@@ -5,6 +5,14 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>12</LangVersion>
+        
+        <Version>0.1</Version>
+        <Authors>João Ferreira</Authors>
+        <Company>Twilight Nomads</Company>
+        <Product>MTK</Product>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <Description>MVVM Toolkit Helper Core Classes</Description>
+        <PackageTags>MVVM</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
